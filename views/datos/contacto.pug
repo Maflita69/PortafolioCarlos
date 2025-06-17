@@ -1,0 +1,32 @@
+extends ../layout/index
+
+block content
+  .container.mt-5
+    .row
+      .col-md-6.offset-md-3
+        .card.shadow
+          .card-body
+            h2.mb-4 Contacto
+            form
+              .mb-3
+                label.form-label(for="nombre") Nombre
+                input.form-control(type="text", id="nombre", placeholder="Tu nombre")
+              .mb-3
+                label.form-label(for="email") Email
+                input.form-control(type="email", id="email", placeholder="tu@email.com")
+              .mb-3
+                label.form-label(for="mensaje") Mensaje
+                textarea.form-control(id="mensaje", rows="4", placeholder="Escribe tu mensaje aquí")
+              button.btn.btn-primary(type="submit") Enviar
+            hr
+            if contacto
+              p.mb-1
+                strong Email: 
+                |  #{contacto.email}
+              p.mb-1
+                strong Teléfono: 
+                |  #{contacto.telefono}
+              if contacto.linkedin
+                p.mb-1
+                  strong LinkedIn: 
+                  a(href=contacto.linkedin, target="_blank") #{contacto.linkedin}

@@ -1,0 +1,17 @@
+extends ../layout/index
+
+block content
+  .container.mt-5
+    .row
+      .col-md-8.offset-md-2
+        h2.mb-4 Proyectos Destacados
+        .row
+          each proyecto in proyectos
+            .col-md-6.mb-4
+              .card.h-100.shadow
+                .card-body
+                  h5.card-title= proyecto.nombre
+                  p.card-text= proyecto.descripcion
+                  if proyecto.tecnologias
+                    p.mb-0
+                      small.text-muted Tecnologías: #{proyecto.tecnologias.join(', ')}

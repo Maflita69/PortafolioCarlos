@@ -1,0 +1,57 @@
+{
+  "nombre": "Carlos Andres Hidalgo Namoncura",
+  "titulo": "Estudiante de Analista Programador",
+  "institucion": "IP-CFT",
+  "carrera": "Programación Web",
+  "correo": "c.hidalgo56@alumnos.santotomas.cl",
+  "telefono": "+56 9 23651030",
+  "perfil": "Soy un estudiante apasionado por la tecnología y el desarrollo web, con habilidades en programación y trabajo en equipo.",
+  "habilidades": [
+    "JavaScript",
+    "Node.js",
+    "HTML5",
+    "CSS3",
+    "Pug",
+    "Git",
+    "Trabajo en equipo",
+    "Resolución de problemas"
+  ],
+  "actitudes": [
+    "Responsable",
+    "Proactivo",
+    "Creativo",
+    "Comprometido",
+    "Aprendizaje continuo"
+  ],
+  "experiencia": [
+    {
+      "tipo": "Educativa",
+      "institucion": "IP-CFT",
+      "titulo": "Analista Programador",
+      "periodo": "2024 - Actualidad"
+    },
+    {
+      "tipo": "Laboral",
+      "empresa": "",
+      "puesto": "",
+      "periodo": "2022 - 2023"
+    }
+  ],
+  "proyectos": [
+    {
+      "nombre": "Portafolio Personal",
+      "descripcion": "Sitio web personal para mostrar mis proyectos y habilidades, desarrollado con Node.js, Express y Pug.",
+      "tecnologias": ["Node.js", "Express", "Pug", "CSS"]
+    },
+    {
+      "nombre": "",
+      "descripcion": ".",
+      "tecnologias": ["JavaScript", "Node.js", "MongoDB"]
+    }
+  ],
+  "contacto": {
+    "email": "c.hidalgo56@alumnos.santotomas.cl",
+    "telefono": "+56 9 23651030",
+    "linkedin": "https://www.linkedin.com/in/carlos-andres-hidalgo-namoncura-7b515335a/"
+  }
+}

@@ -1,0 +1,16 @@
+extends ../layout/index
+block content
+  .container.mt-5
+    .row
+      .col-md-8.offset-md-2
+        .card.shadow
+          .card-body
+            h2.mb-4 Acerca de mí
+            h4 Habilidades
+            ul.list-group.mb-3
+              each habilidad in habilidades
+                li.list-group-item= habilidad
+            h4 Actitudes
+            ul.list-group
+              each actitud in actitudes
+                li.list-group-item= actitud
