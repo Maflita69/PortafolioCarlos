@@ -10,7 +10,9 @@
     "JavaScript",
     "Node.js",
     "HTML5",
-    "CSS3",
+    "PYTHON",
+    "MySQL",
+    "JAVA",
     "Pug",
     "Git",
     "Trabajo en equipo",
@@ -28,25 +30,28 @@
       "tipo": "Educativa",
       "institucion": "IP-CFT",
       "titulo": "Analista Programador",
-      "periodo": "2024 - Actualidad"
-    },
-    {
-      "tipo": "Laboral",
-      "empresa": "",
-      "puesto": "",
-      "periodo": "2022 - 2023"
+      "periodo": "PROXIMAMENTE",
+      "experiencia": "Proximamente."
     }
   ],
   "proyectos": [
     {
       "nombre": "Portafolio Personal",
       "descripcion": "Sitio web personal para mostrar mis proyectos y habilidades, desarrollado con Node.js, Express y Pug.",
-      "tecnologias": ["Node.js", "Express", "Pug", "CSS"]
+      "tecnologias": [
+        "Node.js",
+        "Express",
+        "Pug",
+        "CSS"
+      ]
     },
     {
-      "nombre": "",
-      "descripcion": ".",
-      "tecnologias": ["JavaScript", "Node.js", "MongoDB"]
+      "nombre": "Sistema de iventario",
+      "descripcion": "una aplicación basada en Java que proporciona una interfaz gráfica de usuario (GUI) para gestionar productos, categorías, compras y ventas . El sistema incluye funciones como añadir nuevos productos, asignar categorías, realizar compras y vender productos.",
+      "tecnologias": [
+        "Java",
+        "MySQL"
+      ]
     }
   ],
   "contacto": {

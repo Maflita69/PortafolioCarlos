@@ -2,31 +2,49 @@ extends ../layout/index
 
 block content
   .container.mt-5
-    .row
-      .col-md-6.offset-md-3
-        .card.shadow
+    .row.justify-content-center
+      .col-md-8.col-lg-6
+        .card.shadow-lg.border-0
           .card-body
-            h2.mb-4 Contacto
+            h2.mb-4.text-primary.fw-bold
+              i.fas.fa-envelope.me-2
+              | Contacto
+            p.text-muted.mb-4 ¿Tienes alguna consulta o quieres contactarme? Completa el formulario o usa mis datos de contacto.
+
             form
               .mb-3
-                label.form-label(for="nombre") Nombre
+                label.form-label(for="nombre") 
+                  i.fas.fa-user.me-2
+                  | Nombre
                 input.form-control(type="text", id="nombre", placeholder="Tu nombre")
               .mb-3
-                label.form-label(for="email") Email
+                label.form-label(for="email") 
+                  i.fas.fa-envelope.me-2
+                  | Email
                 input.form-control(type="email", id="email", placeholder="tu@email.com")
               .mb-3
-                label.form-label(for="mensaje") Mensaje
+                label.form-label(for="mensaje") 
+                  i.fas.fa-comment-dots.me-2
+                  | Mensaje
                 textarea.form-control(id="mensaje", rows="4", placeholder="Escribe tu mensaje aquí")
-              button.btn.btn-primary(type="submit") Enviar
+              button.btn.btn-primary.w-100(type="submit")
+                i.fas.fa-paper-plane.me-2
+                | Enviar
+
             hr
+
             if contacto
-              p.mb-1
-                strong Email: 
-                |  #{contacto.email}
-              p.mb-1
-                strong Teléfono: 
-                |  #{contacto.telefono}
-              if contacto.linkedin
-                p.mb-1
-                  strong LinkedIn: 
-                  a(href=contacto.linkedin, target="_blank") #{contacto.linkedin}
+              .mt-3
+                p.mb-2
+                  i.fas.fa-envelope.text-primary.me-2
+                  strong Email: 
+                  |  #{contacto.email}
+                p.mb-2
+                  i.fas.fa-phone.text-success.me-2
+                  strong Teléfono: 
+                  |  #{contacto.telefono}
+                if contacto.linkedin
+                  p.mb-2
+                    i.fab.fa-linkedin.text-info.me-2
+                    strong LinkedIn: 
+                    a(href=contacto.linkedin, target="_blank") #{contacto.linkedin}

@@ -2,16 +2,27 @@ extends ../layout/index
 
 block content
   .container.mt-5
-    .row
-      .col-md-8.offset-md-2
-        h2.mb-4 Proyectos Destacados
-        .row
-          each proyecto in proyectos
-            .col-md-6.mb-4
-              .card.h-100.shadow
-                .card-body
-                  h5.card-title= proyecto.nombre
-                  p.card-text= proyecto.descripcion
-                  if proyecto.tecnologias
-                    p.mb-0
-                      small.text-muted Tecnologías: #{proyecto.tecnologias.join(', ')}
+    .row.justify-content-center
+      .col-lg-8
+        .card.mb-4.shadow-sm.border-0
+          .card-body.text-center
+            h2.mb-4.text-primary.fw-bold Proyectos Destacados
+            p.text-muted.mb-0 Aquí puedes ver algunos de los proyectos en los que he trabajado recientemente.
+
+    .row.g-4
+      each proyecto in proyectos
+        .col-md-6.col-lg-4
+          .card.h-100.shadow-sm.border-0
+            if proyecto.imagen
+              img.card-img-top.rounded-top(src=proyecto.imagen, alt=proyecto.nombre)
+            .card-body.d-flex.flex-column
+              h5.card-title.text-primary= proyecto.nombre
+              p.card-text.flex-grow-1= proyecto.descripcion
+              if proyecto.tecnologias
+                p.mb-2
+                  i.fas.fa-tools.me-2.text-secondary
+                  small.text-muted Tecnologías: #{proyecto.tecnologias.join(', ')}
+              if proyecto.link
+                a.btn.btn-outline-primary.mt-auto(href=proyecto.link, target="_blank")
+                  i.fas.fa-external-link-alt.me-1
+                  | Ver proyecto

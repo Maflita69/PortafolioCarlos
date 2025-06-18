@@ -23,12 +23,21 @@ const viewCurriculum = (req, res) => {
     const filePath = path.join(process.cwd(), 'data', 'info.json');
     fs.readFile(filePath, 'utf-8', (err, data) => {
         if (err) {
-            return res.render('datos/cv', { experiencia: [] });
+            return res.render('datos/cv', { experiencia: [], educacion: [], darosPersonales: {} });
         }
         const jsonData = JSON.parse(data);
         res.render('datos/cv', {
-            experiencia: jsonData.experiencia || []
-        });
+            experiencia: jsonData.experiencia || [],
+            educacion: jsonData.cv?.educacion || [],
+            datosPersonales: {
+                nombre: jsonData.nombre,
+                titulo: jsonData.titulo,
+                institucion: jsonData.institucion,
+                carrera: jsonData.carrera,
+                correo: jsonData.correo,
+                telefono: jsonData.telefono
+            }
+            });
     });
 };
 

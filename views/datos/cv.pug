@@ -2,17 +2,48 @@ extends ../layout/index
 
 block content
   .container.mt-5
-    .row
-      .col-md-8.offset-md-2
-        .card.shadow
+    .row.justify-content-center
+      .col-lg-8
+        .card.mb-4.shadow-sm.border-0
           .card-body
-            h2.mb-4 Currículum Vitae
-            h4 Experiencia
-            ul.list-group
-              each exp in experiencia
-                li.list-group-item
-                  strong= exp.titulo || exp.puesto
-                  |  - 
-                  span= exp.institucion || exp.empresa
-                  br
-                  small.text-muted= exp.periodo
+            h4.mb-3.text-primary
+              i.fas.fa-id-card.me-2
+              | Datos Personales
+            ul.list-group.list-group-flush.mb-4
+              li.list-group-item
+                strong Nombre: 
+                |  #{datosPersonales.nombre}
+              li.list-group-item
+                strong Título: 
+                |  #{datosPersonales.titulo}
+              li.list-group-item
+                strong Institución: 
+                |  #{datosPersonales.institucion}
+              li.list-group-item
+                strong Carrera: 
+                |  #{datosPersonales.carrera}
+              li.list-group-item
+                strong Correo: 
+                |  #{datosPersonales.correo}
+              li.list-group-item
+                strong Teléfono: 
+                |  #{datosPersonales.telefono}
+
+            // Título Experiencia Laboral dentro del cuadro
+            h4.mt-4.mb-3.text-primary
+              i.fas.fa-briefcase.me-2
+              | Experiencia Laboral
+
+            if experiencia && experiencia.length
+              .timeline
+                each exp in experiencia
+                  .card.mb-3.shadow-sm.border-0
+                    .card-body
+                      h5.card-title.mb-1.text-dark= exp.puesto || exp.titulo
+                      p.card-subtitle.mb-2.text-muted
+                        | #{exp.empresa || exp.institucion} &nbsp;|&nbsp; 
+                        span.fst-italic= exp.periodo
+                      if exp.descripcion
+                        p.mb-0= exp.descripcion
+            else
+              p.text-muted No hay experiencia registrada.
